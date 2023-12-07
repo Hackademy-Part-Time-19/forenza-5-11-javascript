@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <script src="index.js"></script>
+
+
+    <div class="nuovo-contatto" id="NuovoContatto">
+        <div
+            style="height: 70vh; background-color: white; width: 60vh; border-radius: 60px; display: flex; flex-direction: column; justify-content: center;align-items: center; ">
+            <div style="height: 50px;border-radius: 60px; display: flex;">
+                <div>
+                    <h3 style="text-align: center; flex: 4;">Aggiungi Contatto</h3>
+                </div>
+                <div style="flex: 1;">
+                    <button onclick="ChiudiAggiungContatto()" class="btn-x">
+                        <i class="fa fa-remove" style="font-size:24px"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="div-info">
+                <img src="immagini/gettyimages-1300845620-612x612.jpg" alt=""
+                    style="  width: 80px; height: 80px;border-radius: 100px; margin-top: 7px;">
+                <h5 style="font-size: 200;">Aggiungi Immagine</h5>
+            </div>
+            <div class="div-info-nuovo">
+                <h5 style=" font-weight: 100;  margin: 0%;">Nome</h5>
+                <input type="text" placeholder="Nome" id="Nome">
+            </div>
+            <div class="div-info-nuovo">
+                <h5 style=" font-weight: 100;margin: 0%;">Cognome</h5>
+                <input type="text" placeholder="Cognome" id="Cognome">
+            </div>
+            <div class="div-info-nuovo">
+                <h5 style=" font-weight: 100;margin: 0%;">numero di telefono</h5>
+                <input type="text" placeholder="Numero" id="Numero">
+            </div>
+            <div class="div-info">
+                <h4>preferiti</h4>
+            </div>
+            <div style=" height: 60px; width: 100%; display: flex;padding-top: 20px; justify-content: center;">
+                <button class="btn-2" onclick="salvaContatto()">Salva</button>
+                <button class="btn-2" onclick="ChiudiAggiungContatto()">Annulla</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="div-profilo">
+        <div class="div-container-profilo">
+            <div class="div-prof1">
+                <div class="div-img">
+                    <img src="immagini/gettyimages-1300845620-612x612.jpg" alt="immagine profilo" class="img-1">
+                </div>
+                <div class="div-nome">
+                    <h3>Nome</h3>
+                    <h3>Cognome</h3>
+                </div>
+            </div>
+            <div style="height: 300px;border-bottom: 1px solid black;">
+                <div style="height: 40px;padding: 15px;">
+                    <button class="btn-1">Modifica Profilo</button>
+                </div>
+                <div style="height: 40px;padding: 15px;">
+                    <button class="btn-1" onclick="aggiungiContatto()"> <i class="fa fa-plus"
+                            style="font-size:15px; margin-right: 10px;"></i>
+                        aggiungi contatto</button>
+                </div>
+                <div style="height: 40px;padding: 15px;">
+                    <button class="btn-1"> <i class="fa fa-plus" style="font-size:15px; margin-right: 10px;"></i>
+                        crea
+                        gruppo</button>
+                </div>
+                <div style="height: 40px;padding: 15px;">
+                    <button class="btn-1"> <i class="fa fa-star"
+                            style="font-size:20px; margin-right: 10px;"></i>Preferiti</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="barra">
+                <h2 style="text-align: center;">Contatti</h2>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <input id="search" oninput="cercaNomi()" class="btn-1" style="margin: 10px;" placeholder="Search..">
+            </div>
+            <p style="text-align: center;" id="noResult">Nessun contatto</p>
+            <div style="height: 70px;" id="ContainerContatti">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
