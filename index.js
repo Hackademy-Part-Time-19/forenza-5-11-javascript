@@ -198,3 +198,49 @@ function cercaNomi() {
     }
   }
 }
+function modificaProfilo() {
+  document.getElementById('NuovoProfilo').style.display = 'flex'
+}
+function ChiudiModificaProfilo() {
+  document.getElementById('NuovoProfilo').style.display = 'none'
+}
+let ricercaAttiva = false
+
+function ricercaPerLettera(lettera) {
+  console.log('Ricerca per lettera:', lettera)
+  if (ricercaAttiva && ultimaLetteraCercata === lettera) {
+    resettaVisibilitaContatti()
+    return
+  }
+  resettaVisibilitaContatti()
+  let letteraAttiva = false
+  for (let index = 0; index < contatti.length; index++) {
+    let idContatto = `container-${index}-contatto`
+    let nomeContatto = contatti[index].nome.toLowerCase()
+    let cognomeContatto = contatti[index].cognome.toLowerCase()
+
+    if (
+      nomeContatto.startsWith(lettera.toLowerCase()) ||
+      cognomeContatto.startsWith(lettera.toLowerCase())
+    ) {
+      document.getElementById(idContatto).style.display = 'block'
+      letteraAttiva = true
+    } else {
+      document.getElementById(idContatto).style.display = 'none'
+    }
+  }
+  document.getElementById('noResult').style.display = letteraAttiva
+    ? 'none'
+    : 'block'
+  ricercaAttiva = true
+  ultimaLetteraCercata = lettera
+}
+function resettaVisibilitaContatti() {
+  for (let index = 0; index < contatti.length; index++) {
+    let idContatto = `container-${index}-contatto`
+    document.getElementById(idContatto).style.display = 'block'
+  }
+  document.getElementById('noResult').style.display = 'none'
+  ricercaAttiva = false
+  ultimaLetteraCercata = ''
+}
