@@ -150,9 +150,8 @@ function annullaModifica(indiceContatto) {
 }
 
 function eliminaContatto(indiceContatto) {
-  document.getElementById(`div-${indiceContatto}-contatto`).remove()
+  document.getElementById(`container-${indiceContatto}-contatto`).remove()
   contatti = contatti.filter((contatto) => contatto.id !== indiceContatto)
-
   if (contatti.length === 0) {
     document.getElementById('noResult').style.display = 'block'
   }
