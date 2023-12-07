@@ -244,3 +244,11 @@ function resettaVisibilitaContatti() {
   ricercaAttiva = false
   ultimaLetteraCercata = ''
 }
+function SalvaProfilo() {
+  var nome = document.getElementById('NomeProfilo1').value
+  var cognome = document.getElementById('CognomeProfilo1').value
+  var numero = document.getElementById('NumeroProfilo1').value
+  document.getElementById('NomeProfilo').innerText = nome
+  document.getElementById('CognomeProfilo').innerText = cognome
+  ChiudiModificaProfilo()
+}
