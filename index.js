@@ -66,7 +66,7 @@ function salvaContatto() {
 </div>
   </div>
    <div id="div-${indiceContatto}-modifica-contatto" style="display: flex;height: 70px;display: none; ">
-  <div class="contatti">
+  <div class="contatti1">
       <div style="display: flex;">
           <div class="div-info">
               <img src="immagini/gettyimages-1300845620-612x612.jpg" alt=""

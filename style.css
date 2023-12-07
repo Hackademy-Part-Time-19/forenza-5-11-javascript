@@ -56,6 +56,15 @@ body {
     flex: 3;
     justify-items: center;
     border-bottom: 1px solid black;
+    width: 90%;
+    margin-left: 50px;
+}
+
+.contatti1 {
+    flex: 3;
+    justify-items: center;
+    width: 90%;
+    margin-left: 50px;
 }
 
 .div-info {
